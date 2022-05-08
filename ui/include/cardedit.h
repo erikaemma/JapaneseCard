@@ -2,8 +2,6 @@
 #define CARDEDIT_H
 
 #include <QDialog>
-//#include <QLineEdit>
-//#include <QTextEdit>
 
 #include "../../tools/include/cardstruct.h"
 

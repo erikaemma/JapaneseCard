@@ -1,8 +1,8 @@
-#include "../include/dbtool.h"
-
 #include <QFileInfo>
 #include <QSqlError>
 #include <QFile>
+
+#include "../include/dbtool.h"
 #include "../include/exception.h"
 #include "../include/readonlydelegate.h"
 

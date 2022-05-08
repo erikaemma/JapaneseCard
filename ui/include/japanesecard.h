@@ -2,8 +2,8 @@
 #define JAPANESECARD_H
 
 #include <QWidget>
-#include "cardedit.h"
 
+#include "cardedit.h"
 #include "../../tools/include/cardstruct.h"
 #include "../../tools/include/dbtool.h"
 

@@ -2,4 +2,13 @@
     <qresource prefix="/sql">
         <file>create.sql</file>
     </qresource>
+    <qresource prefix="/image">
+        <file>About.png</file>
+        <file>main.png</file>
+        <file>Add.png</file>
+        <file>Edit.png</file>
+        <file>Export.png</file>
+        <file>Import.png</file>
+        <file>delete.png</file>
+    </qresource>
 </RCC>

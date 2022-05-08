@@ -1,5 +1,6 @@
-#include "../include/japanesecard.h"
 #include "ui_japanesecard.h"
+
+#include "../include/japanesecard.h"
 #include "../../tools/include/exception.h"
 #include "../include/aboutdialog.h"
 
@@ -7,6 +8,7 @@
 #include <QAbstractItemModel>
 #include <QModelIndex>
 #include <QMessageBox>
+#include <QIcon>
 
 #include <QDebug>
 
@@ -53,6 +55,8 @@ void JapaneseCard::on_ExitPushButton_clicked()
 void JapaneseCard::on_addPushButton_clicked()
 {
     cardEditTitle = "添加";
+    cardEdit->setWindowIcon(QIcon(":/image/Add.png"));
+
     CardStruct cardStruct;
     sendData(cardStruct);
 
@@ -71,6 +75,7 @@ void JapaneseCard::on_addPushButton_clicked()
 void JapaneseCard::on_modifyPushButton_clicked()
 {
     cardEditTitle = "修改";
+    cardEdit->setWindowIcon(QIcon(":/image/Edit.png"));
     QAbstractItemModel* model = ui->tableView->model();
     QModelIndex index = model->index(ui->tableView->currentIndex().row(), 0);
     int id = model->data(index).toInt();
