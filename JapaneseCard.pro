@@ -16,28 +16,28 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    aboutdialog.cpp \
-    cardedit.cpp \
-    databyte.cpp \
-    dbtool.cpp \
-    exception.cpp \
+    $$PWD/ui_src/aboutdialog.cpp \
+    $$PWD/ui_src/cardedit.cpp \
+    $$PWD/tools/src/databyte.cpp \
+    $$PWD/tools/src/dbtool.cpp \
+    $$PWD/tools/src/exception.cpp \
     main.cpp \
-    japanesecard.cpp
+    $$PWD/ui_src/japanesecard.cpp
 
 HEADERS += \
-    aboutdialog.h \
-    cardedit.h \
-    cardstruct.h \
-    databyte.h \
-    dbtool.h \
-    exception.h \
-    japanesecard.h \
-    readonlydelegate.h
+    $$PWD/ui_include/aboutdialog.h \
+    $$PWD/ui_include/cardedit.h \
+    $$PWD/tools/include/cardstruct.h \
+    $$PWD/tools/include/databyte.h \
+    $$PWD/tools/include/dbtool.h \
+    $$PWD/tools/include/exception.h \
+    $$PWD/ui_include/japanesecard.h \
+    $$PWD/tools/include/readonlydelegate.h
 
 FORMS += \
-    aboutdialog.ui \
-    cardedit.ui \
-    japanesecard.ui
+    $$PWD/ui/aboutdialog.ui \
+    $$PWD/ui/cardedit.ui \
+    $$PWD/ui/japanesecard.ui
 
 win32 {
     QMAKE_CXXFLAGS += /source-charset:utf-8 /execution-charset:utf-8
