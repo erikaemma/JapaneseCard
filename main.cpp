@@ -1,4 +1,4 @@
-#include "japanesecard.h"
+#include "ui/include/japanesecard.h"
 
 #include <QApplication>
 

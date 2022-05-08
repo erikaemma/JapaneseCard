@@ -4,8 +4,8 @@
 #include <QWidget>
 #include "cardedit.h"
 
-#include "cardstruct.h"
-#include "dbtool.h"
+#include "../../tools/include/cardstruct.h"
+#include "../../tools/include/dbtool.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class JapaneseCard; }

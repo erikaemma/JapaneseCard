@@ -1,7 +1,7 @@
-#include "japanesecard.h"
+#include "../include/japanesecard.h"
 #include "ui_japanesecard.h"
-#include "exception.h"
-#include "aboutdialog.h"
+#include "../../tools/include/exception.h"
+#include "../include/aboutdialog.h"
 
 #include <QFileInfo>
 #include <QAbstractItemModel>

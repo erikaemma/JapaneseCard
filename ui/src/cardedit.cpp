@@ -1,6 +1,6 @@
-#include "cardedit.h"
+#include "../include/cardedit.h"
 #include "ui_cardedit.h"
-#include "japanesecard.h"
+#include "../include/japanesecard.h"
 
 #include <QDebug>
 

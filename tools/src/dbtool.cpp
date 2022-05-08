@@ -1,9 +1,10 @@
-#include "dbtool.h"
+#include "../include/dbtool.h"
 
 #include <QFileInfo>
 #include <QSqlError>
-#include "exception.h"
-#include "readonlydelegate.h"
+#include <QFile>
+#include "../include/exception.h"
+#include "../include/readonlydelegate.h"
 
 #include <QDebug>
 
@@ -26,7 +27,10 @@ DBTool::DBTool(QString dbFile) : m_dbFile(dbFile)
             throw DbException("Open SQLite .db file (for create) failed.", m_sqliteDatabase.lastError());
         }
         QSqlQuery sqlQuery(m_sqliteDatabase);
-        if(!sqlQuery.exec("create table jwords(id integer primary key autoincrement,c1 text,c2 text,c3 text,type text,tag text,word text,kana text,part_of_speech text,paraphrase text,note text);"))
+        QFile qfile(":/sql/create.sql");
+        qfile.open(QIODevice::ReadOnly);
+        QString createSql = QString(qfile.readAll());
+        if(!sqlQuery.exec(createSql))
         {
             throw DbException("Create table failed.", m_sqliteDatabase.lastError());
         }

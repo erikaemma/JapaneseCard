@@ -16,22 +16,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    $$PWD/ui_src/aboutdialog.cpp \
-    $$PWD/ui_src/cardedit.cpp \
+    $$PWD/ui/src/aboutdialog.cpp \
+    $$PWD/ui/src/cardedit.cpp \
     $$PWD/tools/src/databyte.cpp \
     $$PWD/tools/src/dbtool.cpp \
     $$PWD/tools/src/exception.cpp \
-    main.cpp \
-    $$PWD/ui_src/japanesecard.cpp
+    $$PWD/main.cpp \
+    $$PWD/ui/src/japanesecard.cpp
 
 HEADERS += \
-    $$PWD/ui_include/aboutdialog.h \
-    $$PWD/ui_include/cardedit.h \
+    $$PWD/ui/include/aboutdialog.h \
+    $$PWD/ui/include/cardedit.h \
     $$PWD/tools/include/cardstruct.h \
     $$PWD/tools/include/databyte.h \
     $$PWD/tools/include/dbtool.h \
     $$PWD/tools/include/exception.h \
-    $$PWD/ui_include/japanesecard.h \
+    $$PWD/ui/include/japanesecard.h \
     $$PWD/tools/include/readonlydelegate.h
 
 FORMS += \
@@ -47,3 +47,6 @@ win32 {
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    $$PWD/Resource/qsrc.qrc

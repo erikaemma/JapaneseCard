@@ -5,7 +5,7 @@
 //#include <QLineEdit>
 //#include <QTextEdit>
 
-#include "cardstruct.h"
+#include "../../tools/include/cardstruct.h"
 
 namespace Ui {
 class CardEdit;

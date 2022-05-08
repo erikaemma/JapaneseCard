@@ -1,4 +1,4 @@
-#include "exception.h"
+#include "../include/exception.h"
 
 Exception::Exception(QString message, QString error)
 {
